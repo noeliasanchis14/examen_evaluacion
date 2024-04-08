@@ -1,11 +1,13 @@
-from data_reader import leer_datos, filtrar_calcular_media
+from data_reader import leer_datos , filtrar_calcular_media
 
-def prueba():
-    """
-    Esta función te leerá los datos y calculará la media por alumno
-    """
-    print(leer_datos(df))
-    print(filtrar_calcular_media(df, 'Examen_Noelia'))
+def main():
+    ruta_archivo = 'C:/Users/Usuario/Desktop/examen_evaluacion/Data/datos_examen.csv'
+    datos = leer_datos(ruta_archivo)
 
-if __name__=="__main__":
-    prueba()
+    media_por_alumno = filtrar_calcular_media(datos, 'Examen_Noelia')
+ 
+    print("Media de la columna Value para cada alumno:")
+    print(media_por_alumno)
+
+if __name__ == "_main_":
+    main()
